@@ -21,7 +21,7 @@ public class User {
     private String name;
     @Column(name = "date_of_birth")
     private LocalDate dateOfBirth;
-    @Column(name = "phone_number")
+    @Column(name = "phone_number", unique = true)
     private String phoneNumber;
     private String password;
     @ManyToMany
