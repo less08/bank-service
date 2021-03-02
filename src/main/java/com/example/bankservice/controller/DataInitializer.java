@@ -22,14 +22,14 @@ public class DataInitializer {
         roleAdmin.setRoleName(Role.RoleName.ADMIN);
         Role roleUser = new Role();
         roleUser.setRoleName(Role.RoleName.USER);
-        roleService.add(roleAdmin);
-        roleService.add(roleUser);
+        roleService.save(roleAdmin);
+        roleService.save(roleUser);
         User userAdmin = new User();
         userAdmin.setName("admin");
         userAdmin.setDateOfBirth(LocalDate.of(1997, 4, 3));
         userAdmin.setPhoneNumber("0637593406");
         userAdmin.setPassword("pass");
         userAdmin.setRoles(Set.of(roleAdmin, roleUser));
-        userService.add(userAdmin);
+        userService.save(userAdmin);
     }
 }
